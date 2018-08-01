@@ -33,10 +33,10 @@ describe('Cinema', function () {
     assert.deepStrictEqual(titles, ['Moonlight', 'Blade Runner 2049', 'Dunkirk', 'Black Panther', 'T2 Trainspotting']);
   });
 
-  // it('should be able to find a film by title', function () {
-  //   const filmByTitle = cinema.films.find(film => film.title);
-  //   assert.strictEqual(filmByTitle, 'Moonlight');
-  // });
+  it('should be able to find a film by title', function () {
+    const filmByTitle = cinema.getFilmByTitle('Moonlight');
+    assert.strictEqual(filmByTitle, moonlight);
+  });
 
 
 
