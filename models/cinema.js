@@ -29,4 +29,8 @@ Cinema.prototype.calculateTotalRunningTime = function () {
   return (this.films.map(film => film.length)).reduce((sum, length) => sum + length);
 };
 
+Cinema.prototype.filmsByProperty = function (property, value) {
+  return this.films.filter(film => film[property] === value);
+};
+
 module.exports = Cinema;
