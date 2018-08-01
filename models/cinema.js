@@ -23,4 +23,10 @@ Cinema.prototype.allFilmsAreOverDuration = function (duration) {
   return this.films.every(film => film.length > duration);
 };
 
+Cinema.prototype.calculateTotalRunningTime = function () {
+  // const lengths = this.films.map(film => film.length);
+  // return lengths.reduce((sum, length) => sum + length);
+  return (this.films.map(film => film.length)).reduce((sum, length) => sum + length);
+};
+
 module.exports = Cinema;
