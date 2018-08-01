@@ -18,9 +18,9 @@ Cinema.prototype.areThereFilmsFromParticularYear = function (year) {
   if (this.films.filter(film => film.year === year)) {return true};
 };
 
-// Cinema.prototype.areThereFilmsFromParticularYear = function (year) {
-//   return
-// };
-
+Cinema.prototype.allFilmsAreOverDuration = function (duration) {
+  // return (this.films.filter(film => film.length >= duration)).length === this.films.length;
+  return this.films.every(film => film.length > duration);
+};
 
 module.exports = Cinema;
